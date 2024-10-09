@@ -12,15 +12,20 @@
             padding: 0;
             box-sizing: border-box; /* Makes width and height calculations easier */
         }
-        
+
         body {
             display: flex;
-            flex-direction: column; /* Align items vertically */
+            flex-direction: column; /* Stack items vertically */
             align-items: center;    /* Center items horizontally */
             justify-content: center; /* Center items vertically */
             height: 100vh; /* Full viewport height */
             font-family: Arial, sans-serif; /* Default font family */
-            background-color: #f0f0f0; /* Optional background color for better visibility */
+            background-color: #002147; /* Deep blue background color */
+            color: white; /* Set text color to white for contrast */
+        }
+
+        .container {
+            text-align: center; /* Center text and elements within this container */
         }
 
         h1 {
@@ -33,6 +38,7 @@
             border-radius: 5px; /* Rounded corners for the input */
             border: 1px solid #ccc; /* Border for the input */
             width: 200px; /* Fixed width for the input field */
+            font-size: 16px; /* Font size for input text */
         }
 
         .my-button {
@@ -43,6 +49,7 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px; /* Increased font size for better visibility */
+            transition: background-color 0.3s; /* Smooth transition for background color */
         }
 
         .my-button:hover {
@@ -51,8 +58,7 @@
     </style>
 </head>
 <body>
-    <h1>Welcome</h1>
-    <input type="text" id="username" placeholder="Enter your username">
-    <button class="my-button">Click me</button>
-</body>
-</html>
+    <div class="container">
+        <h1>Welcome</h1>
+        <input type="text" id="username" placeholder="Enter your username">
+    
