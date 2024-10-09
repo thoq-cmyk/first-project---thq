@@ -1,14 +1,58 @@
-<!Doctype HTML> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Welcome Page</title>
+    <style>
+        /* Resetting default margin and padding for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Makes width and height calculations easier */
+        }
+        
+        body {
+            display: flex;
+            flex-direction: column; /* Align items vertically */
+            align-items: center;    /* Center items horizontally */
+            justify-content: center; /* Center items vertically */
+            height: 100vh; /* Full viewport height */
+            font-family: Arial, sans-serif; /* Default font family */
+            background-color: #f0f0f0; /* Optional background color for better visibility */
+        }
 
-<HTML lang="eng">
-<html>
-    <meta charset = "UTF 8" />
-<meta name = "viewport" content = "width" 
-link ref ="stylesheet" href ="style.css" 
-<title> Tanz </title>
+        h1 {
+            margin-bottom: 20px; /* Space below the header */
+        }
 
+        input {
+            margin-bottom: 20px; /* Space below the input field */
+            padding: 10px; /* Padding inside the input */
+            border-radius: 5px; /* Rounded corners for the input */
+            border: 1px solid #ccc; /* Border for the input */
+            width: 200px; /* Fixed width for the input field */
+        }
 
+        .my-button {
+            background-color: rgb(214, 14, 117);
+            color: rgb(255, 255, 255); /* Changed text color to white for better contrast */
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px; /* Increased font size for better visibility */
+        }
 
+        .my-button:hover {
+            background-color: rgb(175, 10, 95); /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <input type="text" id="username" placeholder="Enter your username">
+    <button class="my-button">Click me</button>
+</body>
 </html>
-
- 
