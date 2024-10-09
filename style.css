@@ -1,0 +1,51 @@
+<style>
+        /* Resetting default margin and padding for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Makes width and height calculations easier */
+        }
+
+        body {
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            align-items: center;    /* Center items horizontally */
+            justify-content: center; /* Center items vertically */
+            height: 100vh; /* Full viewport height */
+            font-family: Arial, sans-serif; /* Default font family */
+            background-color: #002147; /* Deep blue background color */
+            color: rgb(212, 255, 0); /* Set text color to white for contrast */
+        }
+
+        .container {
+            text-align: center; /* Center text and elements within this container */
+        }
+
+        h1 {
+            margin-bottom: 20px; /* Space below the header */
+        }
+
+        input {
+            margin-bottom: 20px; /* Space below the input field */
+            padding: 10px; /* Padding inside the input */
+            border-radius: 5px; /* Rounded corners for the input */
+            border: 1px solid #ccc; /* Border for the input */
+            width: 200px; /* Fixed width for the input field */
+            font-size: 16px; /* Font size for input text */
+        }
+
+        .my-button {
+            background-color: rgb(214, 14, 117);
+            color: rgb(255, 255, 255); /* Changed text color to white for better contrast */
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px; /* Increased font size for better visibility */
+            transition: background-color 0.3s; /* Smooth transition for background color */
+        }
+
+        .my-button:hover {
+            background-color: rgb(175, 10, 95); /* Darker shade on hover */
+        }
+    
