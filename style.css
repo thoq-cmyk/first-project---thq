@@ -1,51 +1,146 @@
-<style>
-        /* Resetting default margin and padding for all elements */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box; /* Makes width and height calculations easier */
-        }
+/* General reset for margin, padding, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
-        body {
-            display: flex;
-            flex-direction: column; /* Stack items vertically */
-            align-items: center;    /* Center items horizontally */
-            justify-content: center; /* Center items vertically */
-            height: 100vh; /* Full viewport height */
-            font-family: Arial, sans-serif; /* Default font family */
-            background-color: #002147; /* Deep blue background color */
-            color: rgb(212, 255, 0); /* Set text color to white for contrast */
-        }
+/* Body styling with a background image */
+body {
+    background: url('background-image.jpg') no-repeat center center fixed; /* Background image */
+    background-size: cover; /* Make the image cover the entire background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    color: rgb(212, 255, 0); /* Set text color to a contrasting yellow */
+}
 
-        .container {
-            text-align: center; /* Center text and elements within this container */
-        }
+/* Background video styling */
+#background-video {
+    position: fixed; /* Make the video fill the screen */
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Send video to the background */
+    transform: translate(-50%, -50%); /* Center the video */
+}
 
-        h1 {
-            margin-bottom: 20px; /* Space below the header */
-        }
+/* Overlay styling to darken background video */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    z-index: 1; /* Overlay above video */
+}
 
-        input {
-            margin-bottom: 20px; /* Space below the input field */
-            padding: 10px; /* Padding inside the input */
-            border-radius: 5px; /* Rounded corners for the input */
-            border: 1px solid #ccc; /* Border for the input */
-            width: 200px; /* Fixed width for the input field */
-            font-size: 16px; /* Font size for input text */
-        }
+/* Content styling for text over the video */
+.content {
+    color: white;
+    text-align: center;
+    max-width: 800px;
+}
 
-        .my-button {
-            background-color: rgb(214, 14, 117);
-            color: rgb(255, 255, 255); /* Changed text color to white for better contrast */
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px; /* Increased font size for better visibility */
-            transition: background-color 0.3s; /* Smooth transition for background color */
-        }
+/* Button styling for interactive elements */
+.my-button {
+    display: inline-block;
+    background-color: #61dafb; /* Light blue background color */
+    color: #282c34; /* Dark text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none; /* Remove underline from link */
+    cursor: pointer;
+    font-size: 16px; /* Increased font size for better visibility */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    margin-top: 20px; /* Space above button */
+}
 
-        .my-button:hover {
-            background-color: rgb(175, 10, 95); /* Darker shade on hover */
-        }
-    
+.my-button:hover {
+    background-color: #21a1f1; /* Darker color on hover */
+}
+
+/* Contact page container styling */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh; /* Full viewport height */
+    background-color: rgba(243, 243, 243, 0.8); /* Light overlay color with transparency */
+    padding: 20px;
+}
+
+/* Contact image styling */
+.contact-image img {
+    max-width: 400px; /* Limit the image size */
+    width: 100%; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 30px; /* Space between image and form */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a polished look */
+}
+
+/* Contact form styling */
+.contact-form {
+    background-color: #ffffff; /* White background for the form */
+    padding: 30px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    max-width: 500px; /* Maximum width for the form */
+    width: 100%; /* Make the form responsive */
+}
+
+/* Form heading */
+.contact-form h2 {
+    margin-bottom: 20px;
+    color: #333333; /* Darker text color */
+    text-align: center;
+}
+
+/* Label styling for form fields */
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555555; /* Medium gray text */
+    font-weight: bold;
+}
+
+/* Input and textarea styling */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc; /* Light border color */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px;
+}
+
+/* Button styling for the contact form */
+.contact-form .my-button {
+    background-color: rgb(214, 14, 117); /* Pink background color */
+    color: white; /* White text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s; /* Smooth transition effect */
+}
+
+.contact-form .my-button:hover {
+    background-color: rgb(175, 10, 95); /* Darker pink on hover */
+}
